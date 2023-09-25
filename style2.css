@@ -1,0 +1,172 @@
+
+@font-face { /* estiliza com uma fonte externa baixada*/
+  font-family:'Fonstars';
+  src: url('Fonstars')
+  format('opentype'); 
+}
+
+/* Estilo para o cabeçalho */
+header {
+  display: flex;
+  align-items: center; /* Alinha verticalmente ao centro */
+}
+header img {
+  width: 2.5em; /* Define a largura da imagem para ser igual ao tamanho do texto */
+  height: 2.5em; /* Define a altura da imagem para ser igual ao tamanho do texto */
+  margin-right: 10px; /* Espaçamento à direita da imagem */
+}
+/* Estilo para a primeira imagem */
+header img:first-child {
+  margin-right: 10px; /* Espaçamento à direita da primeira imagem */
+}
+
+/* Estilo para a segunda imagem */
+header img:last-child {
+  margin-left: 10px; /* Espaçamento à esquerda da segunda imagem */
+}
+
+/* Defina a animação com a propriedade @keyframes */
+@keyframes moverGif {
+  0% {
+      transform: translateX(0); /* Começa na posição original (sem movimento horizontal) */
+  }
+  100% {
+      transform: translateX(100px); /* Move 100 pixels para a direita */
+  }
+}
+
+/* Aplique a animação à imagem GIF */
+#gif {
+  animation: moverGif 4s ease-in-out infinite; /* Nome da animação, duração, timing function e repetição */
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+/* Estilo para o body */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+      background-color:#ffffff;
+
+}
+.item {
+  flex-basis: calc(33.33% - 20px); /* 33.33% de largura com espaço entre as colunas */
+  margin: 10px; /* Espaçamento entre os itens */
+  text-align: center;
+}
+.item p {
+  margin-top: 10px; /* Espaçamento entre a imagem e o texto */
+}
+/* Estilo para o header */
+header {
+  background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+  color: #fff;
+  padding: 20px 0;
+  font-family:'Fonstars';
+  font-size: 50px;
+  text-align: center;
+  color: white;
+}
+div img { /* para dar a todas as imagens ao mesmo tamanho */
+  width: 280px!important;
+  height: 200px!important;
+  }
+
+.flex, img{
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      margin: 0 auto;
+}
+h1, h2, h4{
+  text-align: center;
+}
+
+footer {
+  background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+  color: #ffffff;
+  text-align: center;
+  padding: 10px 0;
+  block-size: auto;
+  
+}
+
+/* Estilo para o link "VOLTAR" no rodapé */
+footer a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* Estilo para o link "VOLTAR" no hover */
+footer a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+  
+p{
+  padding-left: 80px;
+  padding-right: 80px;
+}
+/* Media query para telas com largura máxima de 768 pixels (exemplo: smartphones) */
+@media screen and (max-width: 768px) {
+
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .item {
+    flex-basis: calc(33.33% - 20px);
+    margin: 10px;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  h1, h2, h4 {
+    text-align: center;
+    font-family: 'Fonstars', Arial, sans-serif; /* Priorize a fonte personalizada */
+  }
+  
+  /* Estilo para h1 */
+  h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilo para h2 */
+  h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilo para h4 */
+  h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  footer {
+    background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  /* Estilo para o link "VOLTAR" no rodapé */
+  footer a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  
+  /* Estilo para o link "VOLTAR" no hover */
+  footer a:hover {
+    text-decoration: underline;
+    color: #fff;
+  }
+      
+
+}
